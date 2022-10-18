@@ -33,3 +33,14 @@ def find_missing(sequence)
   longest_repetition("aaabb")
   # ["a", 3]
 
+
+
+#Finne current index
+def reverse_alternate(string)
+    string.gsub(/[^\s]+/).with_index { |w, idx| idx.even? ? w : w.reverse }
+  end
+  
+  reverse_alternate("Apples Are Good")
+  # "Apples erA Good"
+  #kombinerer with:index og even? for å teste om ordet er reversert
+  #Gsub uten blokk returnerer et Enumerator-objekt
